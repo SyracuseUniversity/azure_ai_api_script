@@ -46,10 +46,10 @@ A simple bash script for making requests to Azure AI APIs with token usage and c
 
 ```bash
 # Single request
-./invoke.sh --endpoint_url "https://your-endpoint.openai.azure.com/openai/deployments/your-deployment/chat/completions?api-version=2023-05-15" --api_key "your-api-key" --content "Write a haiku about programming"
+./invoke.sh --endpoint_url "https://your-endpoint.models.ai.azure.com/chat/completions" --api_key "$API_KEY" --content "Write a haiku about programming" --input_cost 0.00015 --output_cost 0.0006
 
 # Batch processing
-./invoke.sh --endpoint_url "https://your-endpoint.openai.azure.com/openai/deployments/your-deployment/chat/completions?api-version=2023-05-15" --api_key "your-api-key" --input_file "requests.txt" --input_cost 0.00015 --output_cost 0.0006
+./invoke.sh --endpoint_url "https://your-endpoint.models.ai.azure.com/chat/completions" --api_key "$API_KEY" --input_file "requests.txt" --input_cost 0.00015 --output_cost 0.0006
 ```
 
 ## Output
